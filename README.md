@@ -1,0 +1,2 @@
+# NgmiCodes
+my solutions
