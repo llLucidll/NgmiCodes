@@ -1,4 +1,5 @@
 **Approach**
+
 I. HashMap Solution
 1. Initialize two hashmaps for both strings.
 2. Go through both strings and remember the frequency of the letters using the hashmap
