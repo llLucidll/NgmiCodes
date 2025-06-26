@@ -1,6 +1,6 @@
 def isPalindrome(s: str) -> bool:
     l = 0
-    r = len(s)
+    r = len(s) - 1
 
     while l < r:
         while l < r and not alphanum(s[l]):
