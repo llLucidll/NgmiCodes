@@ -1,4 +1,4 @@
-def isPalindrome(self, s: str) -> bool:
+def isPalindrome(s: str) -> bool:
     l = 0
     r = len(s)
 
