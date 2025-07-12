@@ -11,3 +11,11 @@
     1. Remember the first.next and second.next
     2. Set first.next = second
     3. Now we need first.next.next  = old first.next so we do second.next = tmp1 (second.next = first.next)
+
+
+
+Time: O(n) We parse through the list once
+
+
+
+Space: O(1) We don't store anything extra
