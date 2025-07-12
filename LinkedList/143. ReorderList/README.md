@@ -1,6 +1,8 @@
 **Approach**
 
 
+![alt text](image.png)
+
 1. First we declare a slow and fast pointer to get to the halfway point of the linked list
 2. Second we reverse the second half of the linked list from slow -> fast after reaching the halfway point
 3. Thirdly we set two pointers pointing to head and prev (prev is the node which we have after the second half is reversed. So prev.next traverses the list from the end in reverse)
