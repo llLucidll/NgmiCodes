@@ -6,10 +6,10 @@ def search(nums: List[int], target:int) -> int:
         m = l + ((r-l)//2)
 
         if nums[m] > target:
-            r -= 1
+            r = m - 1
         elif nums[m] < target:
-            l += 1
+            l = m + 1
         else:
-            return m
+            return 
     
     return -1
