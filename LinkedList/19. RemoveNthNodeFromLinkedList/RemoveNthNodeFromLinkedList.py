@@ -4,7 +4,7 @@ class ListNode:
         self.next = next
 def removeNthFromEnd(head, n:int):
     ptr = delayed = head
-
+    
     for i in range(n):
         ptr = ptr.next
     
