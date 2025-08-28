@@ -14,3 +14,11 @@
 5. Then we do our check for if its possible to rearrange the string as required
 6. If so then we proceed and start placing the letters in our list "reorganized" in the specified indicies
 7. Return the joined list
+
+
+
+Time: O(nlogn) n for the Counter and nlogn is for the most_common function which sorts by frequencies.
+
+
+
+Space: O(n) We create a new list for our reorganized string
