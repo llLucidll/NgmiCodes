@@ -1,0 +1,1 @@
+Place where I post my solutions to kata-catalog OOP problems
