@@ -1,6 +1,6 @@
 def checkInclusion(s1: str, s2: str) -> bool:
     # Edge Case we can remove from the start
-    if len(s1) < len(s2):
+    if len(s1) > len(s2):
         return False
 
     s1Count, s2Count = [0] * 26, [0] * 26
