@@ -39,6 +39,6 @@ class TaskManager:
         if self.tasks.get(task_title, None) == None:
             return False # Task DNE
         task = self.tasks[task_title]
-        task.status = True
+        task.setStatus(True)    
         return True
         
