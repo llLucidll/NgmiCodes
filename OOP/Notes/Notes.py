@@ -8,11 +8,7 @@ class Note:
         self.title = title
         self.content = content
         self.date = date
-
-        self.keywords = set()
-
-        for word in (title + content):
-            self.keywords.add(word)
+        self.keywords = set(_tokenize(title + " " + content))
     
     def semanticSearch(self, keyword: str) -> bool:
         if keyword in self.keywords:

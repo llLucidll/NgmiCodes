@@ -21,3 +21,6 @@ def test_semantic():
 def test_add():
     noteManager = NoteManager()
     note = Note("title", "content", "12-25-2005")
+    assert len(noteManager.notes) == 0
+    noteManager.addNote(note)
+    assert len(noteManager.notes) == 1
