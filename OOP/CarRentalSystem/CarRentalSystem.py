@@ -7,7 +7,7 @@ class Car:
         self._status = True # Status if the car is rented or not
 
     def __repr__(self) -> str:
-        return f"Car Make: {self.make} ; Car Model: {self.model} ; Car Year: {self.year} ; Car status: {self.status}" 
+        return f"Car Make: {self.make} ; Car Model: {self.model} ; Car Year: {self.year} ; Car status: {self._status}" 
     
     def available(self):
         return self._status
@@ -16,12 +16,15 @@ class Car:
 
 class CarRental:
     def __init__(self, cars):
-        self.cars = cars # Cars is initially a hashmap of Car objects
+        self.cars = {}
+        for car in cars:
+            self.cars[car.id] = car 
+
     
     # returns a list of cars that fit the available criteria
     def displayCars(self, make, model, year):
         available = [] 
-        
+        #
         for _, car in self.cars.items():
             if car.available() == True:
                 if make == None or car.make == make:
