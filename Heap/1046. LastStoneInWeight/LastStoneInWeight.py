@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import heapq 
 
 def lastStoneWeight(self, stones: list[int]) -> int:
@@ -21,24 +21,3 @@ def lastStoneWeight(self, stones: list[int]) -> int:
         return 0
     else:
         return -1 * heap[0]
-=======
-import heapq
-def lastStoneWeight(stones: list[int]) -> int:
-    maxHeap = []
-
-    for stone in stones:
-        heapq.heappush(maxHeap, -stone)
-
-    while len(maxHeap) >= 2:
-        stone1 = -heapq.heappop(maxHeap)
-        stone2 = -heapq.heappop(maxHeap)
-
-        if stone1 != stone2:
-            heapq.heappush(maxHeap, -abs(stone1 - stone2))
-
-
-    if maxHeap:
-        return -maxHeap[0]
-    else:
-        return 0
->>>>>>> fe010a1 (Solved 1929. ConcatenationOfArray)
