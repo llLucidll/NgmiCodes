@@ -11,4 +11,16 @@ Time complexity: O(N * M) where N is the number of rows and M is the number of c
 
 
 
-Space: O(1) We don't store anything extra into memory and as such the space is constant
+Space: O(N*M) Worst case recursion stack size (All  nodes are "1" and connected)
+
+
+2. BFS:
+    1. We maintain a queue of elements at the current bfs node and we set our current node to "0"
+    2. Then we set all the child nodes to "0" assuming they are "1" (Otherwise they are not added to the queue) This saves us some overhead
+    3. We count an island every time BFS is called independently from the main loop
+
+
+Time: O(N*M) where N is the number of rows and M is the number of columns
+
+
+Space: O(N*M) Worst case queue size
