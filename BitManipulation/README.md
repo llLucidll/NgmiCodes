@@ -1,0 +1,1 @@
+Solutions to problems that require bit manipulation
