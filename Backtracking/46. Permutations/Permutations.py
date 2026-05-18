@@ -2,19 +2,15 @@ class Solution:
     def permute(self, nums):
         result = []
 
-        def dfs(curr, avail):
-            if not avail:
-                result.append(curr)
+        def backtrack(index):
+            if index == len(nums):
+                result.append(nums.copy())
                 return 
 
-            for i in range(len(avail)):
-                curr_copy = curr.copy()
-                avail_copy = avail.copy()
+            for i in range(index, len(nums)):
+                nums[i], nums[index] = nums[index], nums[i] 
+                backtrack(index + 1)
+                nums[index], nums[i] = nums[i], nums[index]
 
-                curr_copy.append(avail[i])
-                avail_copy.pop(i)
-                dfs(curr_copy, avail_copy)
-
-        dfs([], nums)
+        backtrack(0)
         return result
-
